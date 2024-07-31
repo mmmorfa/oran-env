@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  oran:
+    build: .
+    privileged: true
+    command: /bin/sh -c "[ ! -d oran ] && git clone https://github.com/mmmorfa/oran || echo 'Directory already exists'; sleep infinity"
